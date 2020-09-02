@@ -42,3 +42,41 @@
                 <artifactId>spring-boot-starter-validation</artifactId>
             </dependency>
 ```
+
+二：多环境的配置，和多个配置文件的优先级
+    多个文件的配置优先级：
+    1.项目下的config文件
+    2.项目的配置文件
+    3.resource下的config文件夹
+    4.默认的配置文件
+ 
+二点一：多环境配置：
+   properties：
+       定义多个以application开头的文件，然后在主文件使用spring.profiles.active=test定义选择要使用的配置文件
+       
+   yaml:
+  ```yaml
+
+    #yaml多环境配置,多个环境使用---区分
+
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: dev
+---
+
+server:
+  port: 8081
+spring:
+  profiles: test
+---
+server:
+  port: 8082
+spring:
+  profiles: dev
+
+```  
+                                     
+    
