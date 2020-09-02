@@ -78,5 +78,13 @@ spring:
   profiles: dev
 
 ```  
-                                     
+##03-web
+   先导入依赖，将HTML文件放入templates文件夹
+   ```xml
+        <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-thymeleaf</artifactId>
+                </dependency>
+```          
+                           
     
