@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="02-config" />
         <module name="03-web" />
+        <module name="04-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="01-helloworld" target="1.8" />
       <module name="02-config" target="1.8" />
       <module name="03-web" target="1.8" />
+      <module name="04-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -79,12 +79,35 @@ spring:
 
 ```  
 ##03-web
-   先导入依赖，将HTML文件放入templates文件夹
+   一：先导入依赖，将HTML文件放入templates文件夹
    ```xml
         <dependency>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-starter-thymeleaf</artifactId>
                 </dependency>
-```          
+```         
+   二：拓展springmvc,想自定义一些拦截器或者其他，只要实现WebMvcConfigurer接口
+ ```java
+    //扩展springmvc
+    //    如果你想div一些定制化的功能,只要写这个组件,然后把它交给springboot,它会帮我们自动装配
+    @Configuration
+    public class MyMvcConfig implements WebMvcConfigurer {
+    
+    //    二：ViewResolver实现了视图解析器接口的类，我们将自定义的视图解析器加载到bean中
+        @Bean
+        public ViewResolver myViewResolver(){
+            return new MyViewResolver();
+        }
+    
+        //一：自定义一个自己的视图解析器MyViewResolver
+        public static class MyViewResolver implements ViewResolver{
+            @Override
+            public View resolveViewName(String s, Locale locale) throws Exception {
+                return null;
+            }
+        }
+    
+    }
+``` 
                            
     
