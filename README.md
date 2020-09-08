@@ -320,5 +320,60 @@ spring:
                 .excludePathPatterns("/index.html","/","/user/login","/static/**","/templates/*","/i18n/*","/css/*","/js/**","/img/**");
     }
 ```   
-                           
+##6：员工列表展示
+```html
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://getbootstrap.com/docs/4.0/examples/dashboard/ -->
+
+		<!--头部导航栏-->
+		<div th:insert="~{commons/commons::topber}"></div>
+
+		<div class="container-fluid">
+			<div class="row">
+				<!--侧边导航栏 (active='list.html')传递参数给组件 -->
+				<div th:insert="~{commons/commons::sidebar(active='list.html')}"></div>
+
+				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+					<!--添加按钮-->
+					<h2><a class="btn btn-sm btn-success" th:href="@{/emp}">添加员工</a></h2>
+
+					<div class="table-responsive">
+						<table class="table table-striped table-sm">
+							<thead>
+								<tr>
+									<th>id</th>
+									<th>lsatName</th>
+									<th>email</th>
+									<th>gender</th>
+									<th>department</th>
+									<th>birth</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody th:each="emp:${EmpList}">
+								<td th:text="${emp.getId()}"></td>
+								<td th:text="${emp.getLastName()}"></td>
+								<td th:text="${emp.getEmail()}"></td>
+								<td th:text="${emp.getGender() == 0? '女':'男'}"></td>
+								<td th:text="${emp.getDepartment().getDepartment()}"></td>
+								<td th:text="${ #dates.format(emp.getBirth(),'yyyy-MM-dd HH:mm:ss')}"></td>
+								<td>
+									<button class="btn btn-sm btn-primary">编辑</button>
+									<button class="btn btn-sm btn-danger">删除</button>
+								</td>
+							</tbody>
+						</table>
+					</div>
+				</main>
+			</div>
+		</div>
+
+</html>
+```
+   定义模板：
+         1,在模板标签中添加: th:fragment="sidebar"
+         2,在页面中使用：
+                <!--侧边导航栏  -->commons/commons文件夹目录，sidebar模板定义好的参数
+         		<div th:insert="~{commons/commons::sidebar(active='list.html')}"></div>
+    
     

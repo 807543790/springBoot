@@ -41,9 +41,7 @@ public class EmployeeDao {
 //            主键ID自增
             employee.setId(initId++);
         }
-
         employee.setDepartment(departmentDao.getDepartmentById(employee.getDepartment().getId()));
-
         employees.put(employee.getId(),employee);
     }
 
