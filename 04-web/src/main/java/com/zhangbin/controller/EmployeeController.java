@@ -56,13 +56,22 @@ public class EmployeeController {
     public String updateEmp(@PathVariable("id") Integer id, Model model){
 //        根据id查询出来数据
         Employee emp = employeeDao.getEmployee(id);
-        System.out.println(id);
-        System.out.println(emp.getGender());
+        System.out.println("员工ID=  "+id);
+        System.out.println("性别=  "+emp.getGender());
         System.out.println(emp);
         model.addAttribute("emp",emp);
         //查询所有部门信息
         Collection<Employee> department = employeeDao.getAll();
         model.addAttribute("department",department);
         return "update";
+    }
+    //修改员工
+    @PostMapping("/updateEmp")
+    public String updateEmps(Employee employee){
+        System.out.println("修改员工");
+        System.out.println(employee);
+        employeeDao.save(employee);
+
+        return "redirect:/emps";
     }
 }
