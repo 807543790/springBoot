@@ -36,4 +36,12 @@ public class loginController {
         }
 
     }
+
+    //注销功能
+    @RequestMapping("/user/logout")
+    public String logout(HttpSession session){
+        //清除session
+        session.invalidate();
+        return "redirect:/index.html";
+    }
 }
