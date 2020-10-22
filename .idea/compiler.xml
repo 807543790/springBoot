@@ -11,6 +11,7 @@
         <module name="04-web" />
         <module name="05-jdbc" />
         <module name="06-mybatis" />
+        <module name="07-springsecurity" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -20,6 +21,7 @@
       <module name="04-web" target="1.8" />
       <module name="05-jdbc" target="1.8" />
       <module name="06-mybatis" target="1.8" />
+      <module name="07-springsecurity" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
