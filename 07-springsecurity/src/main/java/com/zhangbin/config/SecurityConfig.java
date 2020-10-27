@@ -27,8 +27,20 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/level2/**").hasAnyRole("vip2")
                 .antMatchers("/level3/**").hasAnyRole("vip3");
 
-//        没有权限就会默认跳到登录页面
-        http.formLogin();
+//        没有权限就会默认跳到登录页面---loginPage("/toLogin")设置登录页面
+        http.formLogin().loginPage("/toLogin")
+//             usernameParameter("user").      设置自定义用户名，跟前端的name属性绑定
+//             passwordParameter("pwd").       设置自定义用密码，跟前端的name属性绑定
+//             loginProcessingUrl("/login");   设置自定义登录请求地址，跟前端name属性绑定-
+                .usernameParameter("user").passwordParameter("pwd").loginProcessingUrl("/login");
+        //注销功能，logoutSuccessUrl：注销成功默认跳转首页
+        http.logout().logoutSuccessUrl("/");
+
+//        防止网站攻击
+        http.csrf().disable();//关闭csrf功能，注销失败的原因
+
+        //记住我功能，默认保存两周---rememberMeParameter("remember")绑定自定义记住我的功能
+        http.rememberMe().rememberMeParameter("remember");
     }
 
 //    二：认证
