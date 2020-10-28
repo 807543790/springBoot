@@ -39,7 +39,7 @@ public class UserRealm extends AuthorizingRealm {
             return null;
         }
 
-        System.out.println(service.queryUserByName("房贷"));
+
         return new SimpleAuthenticationInfo("",user.getPwd(),"");
     }
 }
