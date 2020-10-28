@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/05-jdbc/pom.xml" />
         <option value="$PROJECT_DIR$/06-mybatis/pom.xml" />
         <option value="$PROJECT_DIR$/07-springsecurity/pom.xml" />
+        <option value="$PROJECT_DIR$/08-hello-shiro/pom.xml" />
       </list>
     </option>
   </component>
