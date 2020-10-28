@@ -3,13 +3,13 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/02-config/02-config.iml" filepath="$PROJECT_DIR$/02-config/02-config.iml" />
-      <module fileurl="file://$PROJECT_DIR$/08-shiro/02-springboot-shiro.iml" filepath="$PROJECT_DIR$/08-shiro/02-springboot-shiro.iml" />
       <module fileurl="file://$PROJECT_DIR$/03-web/03-web.iml" filepath="$PROJECT_DIR$/03-web/03-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/04-web/04-web.iml" filepath="$PROJECT_DIR$/04-web/04-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/05-jdbc/05-jdbc.iml" filepath="$PROJECT_DIR$/05-jdbc/05-jdbc.iml" />
       <module fileurl="file://$PROJECT_DIR$/06-mybatis/06-mybatis.iml" filepath="$PROJECT_DIR$/06-mybatis/06-mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/07-springsecurity/07-springsecurity.iml" filepath="$PROJECT_DIR$/07-springsecurity/07-springsecurity.iml" />
       <module fileurl="file://$PROJECT_DIR$/08-hello-shiro/08-hello-shiro.iml" filepath="$PROJECT_DIR$/08-hello-shiro/08-hello-shiro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/09-springboot-shiro/09-springboot-shiro.iml" filepath="$PROJECT_DIR$/09-springboot-shiro/09-springboot-shiro.iml" />
       <module fileurl="file://$PROJECT_DIR$/springBoot.iml" filepath="$PROJECT_DIR$/springBoot.iml" />
     </modules>
   </component>
